@@ -1,0 +1,10 @@
+main: com.occydaboss.chesticuffsrpg.PluginMain
+name: ChesticuffsRPG
+version: 1.0-SNAPSHOT
+description: Port of ChesticuffsRPG to Spigot
+author: OccyDaBoss
+
+commands:
+  start:
+    usage: /<command>
+    descripton: Used to start a game of Chesticuffs.

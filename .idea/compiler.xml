@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile name="Annotation profile for ChesticuffsRPG" enabled="true">
+        <sourceOutputDir name="../../Maven Builds/Chesticuffs/generated-sources/annotations" />
+        <sourceTestOutputDir name="../../Maven Builds/Chesticuffs/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="ChesticuffsRPG" />
+      </profile>
+    </annotationProcessing>
+  </component>
+</project>
