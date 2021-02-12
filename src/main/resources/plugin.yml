@@ -3,6 +3,8 @@ name: ChesticuffsRPG
 version: 1.0-SNAPSHOT
 description: Port of ChesticuffsRPG to Spigot
 author: OccyDaBoss
+api-version: 1.16
+depend: [BiomeReplacer]
 
 commands:
   start:
