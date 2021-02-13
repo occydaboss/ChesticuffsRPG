@@ -63,9 +63,11 @@ public class StartExecutor implements CommandExecutor
     public void gameTimer (World world)
     {
         List<Player> players = world.getPlayers();
+        Player player;
 
-        for (Player player : players)
+        if (players.size() == 1)
         {
+            player = players.get(0);
             player.sendMessage(ChatColor.AQUA + "10 Minutes until DeathMatch");
             player.playSound(player.getLocation(), Sound.BLOCK_NOTE_BLOCK_PLING, 0.5f, 5);
 
@@ -123,7 +125,69 @@ public class StartExecutor implements CommandExecutor
                 player.sendTitle(ChatColor.WHITE + "Go!", "", 1, 20, 1);
                 player.playSound(player.getLocation(), Sound.ENTITY_ENDER_DRAGON_GROWL, 0.5f, 1);
             }, 12000);
+        }
+        else
+        {
+            for (Player player1 : players)
+            {
+                player1.sendMessage(ChatColor.AQUA + "10 Minutes until DeathMatch");
+                player1.playSound(player1.getLocation(), Sound.BLOCK_NOTE_BLOCK_PLING, 0.5f, 5);
 
+                Bukkit.getScheduler().runTaskLater(PluginMain.instance, () -> {
+                    player1.sendMessage(ChatColor.AQUA + "5 Minutes until DeathMatch");
+                    player1.playSound(player1.getLocation(), Sound.BLOCK_NOTE_BLOCK_PLING, 0.5f, 5);
+                }, 6000);
+
+                Bukkit.getScheduler().runTaskLater(PluginMain.instance, () -> {
+                    player1.sendMessage(ChatColor.AQUA + "3 Minutes until DeathMatch");
+                    player1.playSound(player1.getLocation(), Sound.BLOCK_NOTE_BLOCK_PLING, 0.5f, 5);
+                }, 8400);
+
+                Bukkit.getScheduler().runTaskLater(PluginMain.instance, () -> {
+                    player1.sendMessage(ChatColor.AQUA + "1 Minute until DeathMatch");
+                    player1.playSound(player1.getLocation(), Sound.BLOCK_NOTE_BLOCK_PLING, 0.5f, 5);
+                }, 10800);
+
+                Bukkit.getScheduler().runTaskLater(PluginMain.instance, () -> {
+                    player1.sendMessage(ChatColor.AQUA + "30 Seconds until DeathMatch");
+                    player1.playSound(player1.getLocation(), Sound.BLOCK_NOTE_BLOCK_PLING, 0.5f, 5);
+                }, 11400);
+
+                Bukkit.getScheduler().runTaskLater(PluginMain.instance, () -> {
+                    player1.sendMessage(ChatColor.AQUA + "10 Seconds until DeathMatch");
+                    player1.playSound(player1.getLocation(), Sound.BLOCK_NOTE_BLOCK_PLING, 0.5f, 5);
+                }, 11800);
+
+                Bukkit.getScheduler().runTaskLater(PluginMain.instance, () -> {
+                    player1.sendTitle(ChatColor.RED + "5...", "", 1, 20, 1);
+                    player1.playSound(player1.getLocation(), Sound.UI_BUTTON_CLICK, 0.5f, 1);
+                }, 11900);
+
+                Bukkit.getScheduler().runTaskLater(PluginMain.instance, () -> {
+                    player1.sendTitle(ChatColor.RED + "4...", "", 1, 20, 1);
+                    player1.playSound(player1.getLocation(), Sound.UI_BUTTON_CLICK, 0.5f, 1);
+                }, 11920);
+
+                Bukkit.getScheduler().runTaskLater(PluginMain.instance, () -> {
+                    player1.sendTitle(ChatColor.DARK_RED + "3...", "", 1, 20, 1);
+                    player1.playSound(player1.getLocation(), Sound.UI_BUTTON_CLICK, 0.5f, 1);
+                }, 11940);
+
+                Bukkit.getScheduler().runTaskLater(PluginMain.instance, () -> {
+                    player1.sendTitle(ChatColor.DARK_RED + "2...", "", 1, 20, 1);
+                    player1.playSound(player1.getLocation(), Sound.UI_BUTTON_CLICK, 0.5f, 1);
+                }, 11960);
+
+                Bukkit.getScheduler().runTaskLater(PluginMain.instance, () -> {
+                    player1.sendTitle(ChatColor.DARK_RED + "1...", "", 1, 20, 1);
+                    player1.playSound(player1.getLocation(), Sound.UI_BUTTON_CLICK, 0.5f, 1);
+                }, 11980);
+
+                Bukkit.getScheduler().runTaskLater(PluginMain.instance, () -> {
+                    player1.sendTitle(ChatColor.WHITE + "Go!", "", 1, 20, 1);
+                    player1.playSound(player1.getLocation(), Sound.ENTITY_ENDER_DRAGON_GROWL, 2, 1);
+                }, 12000);
+            }
         }
     }
 
